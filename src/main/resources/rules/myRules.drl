@@ -1,0 +1,35 @@
+package org.integrallis.drools.flows
+
+rule "MatchSomeOtherObjectWithFoo"
+	ruleflow-group "decision"
+	when
+		SomeOtherObject(someOtherValue == "foo")
+	then 
+	    System.out.println("In MatchSomeOtherObjectWithFoo"); 
+		insert(new SomeObject("Process One"));
+end
+
+rule "MatchSomeOtherObjectWithBar"
+	ruleflow-group "decision"
+	when
+		SomeOtherObject(someOtherValue == "bar")
+	then 
+	    System.out.println("In MatchSomeOtherObjectWithBar");
+		insert(new SomeObject("Process Two"));
+end
+
+rule "DoSomethingInGroup1"
+	ruleflow-group "group1"
+	when
+		trigger : SomeObject()
+	then 
+		System.out.println("We are in Process One!");
+end
+
+rule "DoSomethingInGroup2"
+	ruleflow-group "group2"
+	when
+		trigger: SomeObject()
+	then 
+		System.out.println("We are in Process Two!");
+end
