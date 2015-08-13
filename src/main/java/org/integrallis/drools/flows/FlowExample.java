@@ -16,12 +16,12 @@ public class FlowExample {
 
 			// 4 - create and assert some facts
 			SomeOtherObject trigger = new SomeOtherObject("foo");
-			
+
 			knowledgeSession.insert(trigger);
-			
+
 			// 5 - start a new process instance
 			knowledgeSession.startProcess("org.integrallis.drools.flows.sample");
-			
+
 			// 6 - fire the rules
 			knowledgeSession.fireAllRules();
 		} catch (Throwable t) {
