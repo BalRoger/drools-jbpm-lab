@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <process processType="Private" isExecutable="true" id="org.integrallis.drools.flows.sample" name="flow" tns:packageName="org.integrallis.drools.flows" >
+
+    <!-- nodes -->
+    <startEvent id="74915021-a5e3-4b2d-9bc6-3184ee7f9128" name="Start"  isInterrupting="false">
+    </startEvent>
+    <endEvent id="188d27af-573d-42cc-a87e-40548b9e53de" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="74915021-a5e3-4b2d-9bc6-3184ee7f9128-188d27af-573d-42cc-a87e-40548b9e53de" sourceRef="74915021-a5e3-4b2d-9bc6-3184ee7f9128" targetRef="188d27af-573d-42cc-a87e-40548b9e53de" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="org.integrallis.drools.flows.sample" >
+      <bpmndi:BPMNShape bpmnElement="74915021-a5e3-4b2d-9bc6-3184ee7f9128" >
+        <dc:Bounds x="198" y="242" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="188d27af-573d-42cc-a87e-40548b9e53de" >
+        <dc:Bounds x="197" y="381" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="74915021-a5e3-4b2d-9bc6-3184ee7f9128-188d27af-573d-42cc-a87e-40548b9e53de" >
+        <di:waypoint x="222" y="266" />
+        <di:waypoint x="221" y="405" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>
